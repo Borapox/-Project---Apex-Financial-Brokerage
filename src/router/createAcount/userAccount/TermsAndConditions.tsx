@@ -114,7 +114,10 @@ const TermsAndConditions = () => {
             </footer>
 
             <form>
-                <input type="checkbox" name="accept"/>
+                <input 
+                    type="checkbox" 
+                    name="accept"
+                />
                 <span className="font-bold ml-5 mt-5">
                     Eu li e aceito os termos e condições de uso.
                 </span>

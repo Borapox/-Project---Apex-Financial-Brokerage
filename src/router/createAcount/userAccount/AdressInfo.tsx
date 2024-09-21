@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 
-import api from "../services/viaCep";  // Importa o serviço configurado da API ViaCEP.
+import api from "../../../services/viaCep.ts";  // Importa o serviço configurado da API ViaCEP.
 
 // Define a interface com as propriedades esperadas do retorno da API
 interface CepData {
