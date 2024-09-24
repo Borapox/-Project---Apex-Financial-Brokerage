@@ -1,7 +1,19 @@
+import { useState } from "react";
+import BtnCreateAccount from "../btn/BtnCreateAccount";
+
+
 const TermsAndConditions = () => {
+    // Estado para armazenar se o checkbox foi aceito (marcado) ou não
+    const [checkBoxAccepet, setCheckBoxAccepet] = useState(false);
+
+    // Função para alternar o estado do checkbox entre true (marcado) e false (desmarcado)
+    const checkBox = () => {
+      setCheckBoxAccepet(!checkBoxAccepet);
+    };
 
     return (
-        <div className="max-w-5xl mx-auto p-8 overflow-x-hidden overflow-y-scroll bg-gray-100 h-[300px] shadow-lg shadow-gray-700">
+
+         <div className="max-w-5xl mx-auto p-8 overflow-x-hidden overflow-y-scroll bg-gray-100 h-[300px] shadow-lg shadow-gray-700">
             <h1 className="text-4xl font-bold text-center mb-8">Termos de Contratação - Projeto Educacional</h1>
                 <p className="text-sm text-gray-600 italic mb-8">
                     Estes termos são puramente educacionais e não têm validade legal.
@@ -114,14 +126,29 @@ const TermsAndConditions = () => {
             </footer>
 
             <form>
-                <input 
-                    type="checkbox" 
+                <input
+                    type="checkbox"
                     name="accept"
+                    // O estado do checkbox é controlado por `checkBoxAccepet`
+                    checked={checkBoxAccepet}
+                    // A função `checkBox` será chamada ao clicar no checkbox
+                    onChange={checkBox}
                 />
                 <span className="font-bold ml-5 mt-5">
                     Eu li e aceito os termos e condições de uso.
                 </span>
             </form>
+
+
+            {checkBoxAccepet && 
+                (
+                        <h1 className="text-red-600 font-bold">
+                            Estou no Check Box
+                        </h1>
+
+                )
+            
+            }
         </div>
     );
 };

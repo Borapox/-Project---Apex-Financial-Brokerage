@@ -1,8 +1,25 @@
 {
-    "teste" : [
-        {   "id" : "1", 
-            "Name" : "Charles",
-            "Sobrenome": "Muller"
-        }
-    ]
+  "users": [
+    {},
+    {
+      "id": "d565",
+      "nome": "Charles Müller",
+      "sobrenome": "Müller Fagundes de Araújo",
+      "cpf": null,
+      "rg": 5524671,
+      "orgaoExpeditor": "SSP-DF",
+      "genero": "masculino",
+      "dataNascimento": "1992-08-01T00:00:00.000Z",
+      "telefone": 61981989292,
+      "email": "muller.mdi@gmail.com",
+      "senha": "123456789",
+      "rendaMensal": 2500,
+      "profissão": "Auxiliar Fotossintético Ambiental",
+      "objetivoInvestimento": "fundoEmergencial",
+      "conhecimentoInvestimento": "moderado",
+      "banco": null,
+      "agencia": 25464,
+      "conta": 1010101
+    }
+  ]
 }
